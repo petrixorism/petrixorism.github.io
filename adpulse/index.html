@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AdPulse</title>
+<meta name="description" content="AdPulse — a calm, read-only AdMob earnings dashboard for Android.">
+<style>
+  :root {
+    --bg: #F2F5F3; --tile: #FFFFFF; --text: #0F1A15; --muted: #5F6D66;
+    --accent: #0B8A57; --border: #E3E9E5; --hero: #3DDC97; --on-hero: #04150D; --hero-muted: #0B3B25;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #090C0B; --tile: #111714; --text: #E8EFEB; --muted: #8A9A92;
+      --accent: #3DDC97; --border: #1A221E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  a { color: var(--accent); }
+  .hero {
+    background: var(--hero); color: var(--on-hero); border-radius: 24px; padding: 28px 24px;
+    margin-bottom: 12px;
+  }
+  .hero h1 { font-size: 40px; line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.5px; }
+  .hero p { margin: 0; color: var(--hero-muted); font-size: 17px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; }
+  .tile {
+    background: var(--tile); border: 1px solid var(--border); border-radius: 20px; padding: 20px;
+  }
+  .tile h2 { font-size: 16px; margin: 0 0 6px; }
+  .tile p { margin: 0; color: var(--muted); font-size: 15px; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .links a {
+    text-decoration: none; padding: 10px 18px; border-radius: 999px; font-weight: 600; font-size: 15px;
+    border: 1px solid var(--border); background: var(--tile);
+  }
+  footer { margin-top: 32px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>AdPulse</h1>
+    <p>Your AdMob earnings at a glance — a calm, read-only dashboard for Android.</p>
+  </section>
+
+  <div class="grid">
+    <div class="tile">
+      <h2>Earnings dashboard</h2>
+      <p>Estimated earnings, impressions, eCPM, clicks and match rate for today, 7 days, 30 days, a year or all time.</p>
+    </div>
+    <div class="tile">
+      <h2>Apps, ad units, countries</h2>
+      <p>See which apps, ad units and countries bring the most revenue.</p>
+    </div>
+    <div class="tile">
+      <h2>Home-screen widget</h2>
+      <p>Today’s earnings on your home screen, refreshed in the background.</p>
+    </div>
+    <div class="tile">
+      <h2>Read-only and private</h2>
+      <p>Uses the <code>admob.readonly</code> permission only. No own server: reports go straight from Google’s
+        AdMob API to your phone and are cached only on the device.</p>
+    </div>
+  </div>
+
+  <div class="links">
+    <a href="privacy-policy/">Privacy policy</a>
+    <a href="mailto:developerravshan@gmail.com">Contact</a>
+  </div>
+
+  <footer>AdPulse is not affiliated with or endorsed by Google. AdMob is a trademark of Google LLC.</footer>
+</main>
+</body>
+</html>
