@@ -54,9 +54,10 @@
   <section id="en" lang="en">
     <h2>English</h2>
     <p>Sleepy is a baby monitor app for Android and iOS, made by Ravshan Baxranov. It connects two of your own phones
-      over a local network (Wi-Fi or a phone hotspot) so one can alert you about sound near your baby. We operate no
-      servers, and the app has no accounts, analytics, advertising or tracking. We do not receive any of your
-      data.</p>
+      over a local network (Wi-Fi or a phone hotspot) so one can alert you about sound near your baby. The app has no
+      accounts and no advertising. Your baby's sound and the data exchanged between your phones never reach us. To
+      keep the app reliable we use Google Firebase services for usage statistics, crash reports and notifications,
+      described below.</p>
 
     <h3>Microphone (baby phone)</h3>
     <p>The baby phone uses the microphone to measure loudness and to tell crying from other noise. Audio is processed
@@ -85,6 +86,21 @@
     <h3>Security</h3>
     <p>Phones pair with a one-time code shown on the baby phone. All traffic between them is encrypted (P-256 key
       exchange, AES-256-GCM). No security measure is perfect.</p>
+
+    <h3>Usage statistics, crash reports and notifications</h3>
+    <p>The app uses these Google Firebase services. They never receive audio, sound levels or pairing keys.</p>
+    <ul>
+      <li><b>Google Analytics for Firebase</b> — how the app is used (screens opened, features used, app version),
+        a random app-instance ID, the Android advertising ID, and approximate location derived from your IP address.
+        Used only to understand usage and improve the app, not for ads.</li>
+      <li><b>Firebase Crashlytics</b> — when the app crashes: error details and stack trace, device model, operating
+        system and app version, and a random installation ID. Used only to find and fix bugs.</li>
+      <li><b>Firebase Cloud Messaging</b> — a device token so the app can receive notifications.</li>
+    </ul>
+    <p>This data is encrypted in transit and processed by Google on our behalf under the
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and
+      <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>. We do not sell
+      your data or share it with anyone else. You can reset or delete your advertising ID in your device settings.</p>
 
     <h3>Watch apps</h3>
     <p>If you use the Wear OS or Apple Watch app, the parent phone sends monitoring status (connection, sound level,
@@ -124,8 +140,9 @@
     <h2>Русский</h2>
     <p>Sleepy — радионяня для Android и iOS от Равшана Бахранова (Ravshan Baxranov). Приложение соединяет два ваших
       телефона через локальную сеть (Wi-Fi или точку доступа телефона), чтобы один предупреждал вас о звуках рядом с
-      ребёнком. У нас нет серверов, в приложении нет аккаунтов, аналитики, рекламы и отслеживания. Мы не получаем
-      никаких ваших данных.</p>
+      ребёнком. В приложении нет аккаунтов и рекламы. Звук ребёнка и данные, которыми обмениваются ваши телефоны,
+      никогда не попадают к нам. Чтобы приложение работало надёжно, мы используем сервисы Google Firebase для
+      статистики использования, отчётов о сбоях и уведомлений — подробнее ниже.</p>
 
     <h3>Микрофон (телефон ребёнка)</h3>
     <p>Телефон ребёнка использует микрофон, чтобы измерять громкость и отличать плач от другого шума. Звук
@@ -154,6 +171,24 @@
     <h3>Безопасность</h3>
     <p>Телефоны сопрягаются с помощью одноразового кода, который показывает телефон ребёнка. Весь трафик между ними
       зашифрован (обмен ключами P-256, AES-256-GCM). Никакая защита не идеальна.</p>
+
+
+    <h3>Статистика, отчёты о сбоях и уведомления</h3>
+    <p>Приложение использует эти сервисы Google Firebase. Они никогда не получают звук, уровень громкости или ключи
+      сопряжения.</p>
+    <ul>
+      <li><b>Google Analytics for Firebase</b> — как используется приложение (открытые экраны, функции, версия
+        приложения), случайный идентификатор экземпляра приложения, рекламный идентификатор Android и
+        приблизительное местоположение, определённое по IP-адресу. Только для понимания использования и улучшения
+        приложения, не для рекламы.</li>
+      <li><b>Firebase Crashlytics</b> — при сбое: описание ошибки и трассировка стека, модель устройства, версии
+        системы и приложения, случайный идентификатор установки. Только для исправления ошибок.</li>
+      <li><b>Firebase Cloud Messaging</b> — токен устройства, чтобы приложение могло получать уведомления.</li>
+    </ul>
+    <p>Эти данные шифруются при передаче и обрабатываются Google от нашего имени согласно
+      <a href="https://policies.google.com/privacy?hl=ru">Политике конфиденциальности Google</a> и
+      <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>. Мы не продаём и
+      никому не передаём ваши данные. Рекламный идентификатор можно сбросить или удалить в настройках устройства.</p>
 
     <h3>Приложения для часов</h3>
     <p>Если вы используете приложение для Wear OS или Apple Watch, телефон родителя отправляет на часы состояние
@@ -193,8 +228,9 @@
     <h2>O‘zbekcha</h2>
     <p>Sleepy — Ravshan Baxranov tomonidan yaratilgan, Android va iOS uchun chaqaloq monitori ilovasi. U o‘zingizning
       ikki telefoningizni mahalliy tarmoq (Wi-Fi yoki telefon hotspoti) orqali bog‘laydi, shunda biri chaqaloq
-      yonidagi ovoz haqida sizni ogohlantiradi. Bizda server yo‘q, ilovada akkaunt, analitika, reklama va kuzatuv
-      yo‘q. Biz sizning hech qanday ma’lumotingizni olmaymiz.</p>
+      yonidagi ovoz haqida sizni ogohlantiradi. Ilovada akkaunt va reklama yo‘q. Chaqaloq ovozi va telefonlaringiz
+      o‘rtasidagi ma’lumotlar hech qachon bizga kelmaydi. Ilova ishonchli ishlashi uchun foydalanish statistikasi,
+      nosozlik hisobotlari va bildirishnomalar uchun Google Firebase xizmatlaridan foydalanamiz — quyida batafsil.</p>
 
     <h3>Mikrofon (bola telefoni)</h3>
     <p>Bola telefoni mikrofondan ovoz balandligini o‘lchash va yig‘ini boshqa shovqindan ajratish uchun foydalanadi.
@@ -224,6 +260,24 @@
     <h3>Xavfsizlik</h3>
     <p>Telefonlar bola telefonida ko‘rsatiladigan bir martalik kod bilan juftlanadi. Ular o‘rtasidagi barcha trafik
       shifrlangan (P-256 kalit almashuvi, AES-256-GCM). Hech qanday himoya mukammal emas.</p>
+
+
+    <h3>Statistika, nosozlik hisobotlari va bildirishnomalar</h3>
+    <p>Ilova quyidagi Google Firebase xizmatlaridan foydalanadi. Ular hech qachon ovoz, ovoz darajasi yoki juftlash
+      kalitlarini olmaydi.</p>
+    <ul>
+      <li><b>Google Analytics for Firebase</b> — ilovadan qanday foydalanilishi (ochilgan ekranlar, funksiyalar,
+        ilova versiyasi), tasodifiy ilova nusxasi ID’si, Android reklama ID’si va IP manzildan aniqlanadigan taxminiy
+        joylashuv. Faqat foydalanishni tushunish va ilovani yaxshilash uchun, reklama uchun emas.</li>
+      <li><b>Firebase Crashlytics</b> — ilova kutilmaganda yopilganda: xato tafsilotlari va stack trace, qurilma
+        modeli, tizim va ilova versiyasi, tasodifiy o‘rnatish ID’si. Faqat xatolarni tuzatish uchun.</li>
+      <li><b>Firebase Cloud Messaging</b> — ilova bildirishnoma olishi uchun qurilma tokeni.</li>
+    </ul>
+    <p>Bu ma’lumotlar uzatishda shifrlanadi va Google tomonidan bizning nomimizdan
+      <a href="https://policies.google.com/privacy?hl=uz">Google maxfiylik siyosati</a> va
+      <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a> asosida qayta
+      ishlanadi. Biz ma’lumotlaringizni sotmaymiz va hech kimga bermaymiz. Reklama ID’sini qurilma sozlamalarida
+      qayta tiklash yoki o‘chirish mumkin.</p>
 
     <h3>Soat ilovalari</h3>
     <p>Wear OS yoki Apple Watch ilovasidan foydalansangiz, ota-ona telefoni kuzatuv holatini (ulanish, ovoz darajasi,
